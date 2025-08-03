@@ -24,10 +24,19 @@ return {
 
   {
     "ofirgall/ofirkai.nvim",
+    name = "ofirkai",
     priority = 1000,
-
     config = function()
       vim.cmd.colorscheme "ofirkai-darkblue"
+      vim.api.nvim_set_hl( 0, "Normal", { bg = "NONE" })
+      vim.api.nvim_set_hl( 0, "NormalFloat", { bg = "NONE" })
+      vim.api.nvim_set_hl( 0, "SignColumn", { bg = "NONE" })
+      vim.api.nvim_set_hl( 0, "LineNr", { fg = "#3f478f", bg = "NONE" })
+      vim.api.nvim_set_hl( 0, "CursorLineNr", { fg = "#909ef5", bg = "NONE" })
+      vim.api.nvim_set_hl( 0, "VertSplit", { bg = "NONE" })
+      vim.api.nvim_set_hl( 0, "Pmenu", { bg = "NONE" })
+      vim.api.nvim_set_hl( 0, "StatusLine", { bg = "#131426" })
+      vim.api.nvim_set_hl( 0, "StatusLineNC", { bg = "#131426" })
     end,
   },
 }
