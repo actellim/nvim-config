@@ -1,0 +1,13 @@
+# Ignore the directory where lazy.nvim installs plugins
+/lazy/
+
+# Ignore the lazy.nvim lock file, as it can contain local paths
+lazy-lock.json
+
+# Ignore undo files
+*.swp
+*.swo
+*.un~
+
+# Ignore the directory created by the Doxygen command
+/html/
