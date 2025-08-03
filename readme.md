@@ -45,7 +45,7 @@ This configuration is designed for a Debian/Ubuntu-based system.
 | `gt` | Go to the next tab. |
 | `gT` | Go to the previous tab. |
 | `:term` | Open a terminal in a horizontal split. |
-| `:vert term`| Open a terminal in a vertical split. |
+| `:vert | term`| Open a terminal in a vertical split. |
 | `Ctrl`+`\` `Ctrl`+`n`| Escape from Terminal mode to Normal mode. |
 
 ### 🧠 LSP (Language Intelligence)
@@ -89,7 +89,6 @@ These keymaps are only active in buffers with an attached LSP server.
 | Command | Description |
 | :--- | :--- |
 | `:Telescope themes` | Open the theme previewer. |
-| `Ctrl`+`j` / `Ctrl`+`k` | (In Telescope) Move selection down/up from the prompt. |
 
 ### 🛠️ Utilities
 
