@@ -33,6 +33,8 @@ return {
       -- Setup servers
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.clangd.setup({ capabilities = capabilities })
+      lspconfig.marksman.setup({ capabilities = capabilities })
+      lspconfig.pyright.setup({ capabilities = capabilities })
 
       -- Disable Completion in markdown.
       vim.api.nvim_create_autocmd("FileType", {

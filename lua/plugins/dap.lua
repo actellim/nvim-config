@@ -8,6 +8,28 @@ return {
 			local dap = require('dap')
 			local dapui = require('dapui')
 
+      -- This tells dap how to use the debugpy adapter installed by Mason
+      dap.adapters.python = function(cb, config)
+        cb({
+          type = 'executable',
+          command = vim.fn.stdpath("data") .. '/mason/bin/debugpy',
+          args = { '-m', 'debugpy.adapter' },
+        })
+      end
+
+      -- This tells dap what a Python launch configuration looks like
+      dap.configurations.python = {
+        {
+          type = 'python',
+          request = 'launch',
+          name = 'Launch file',
+          program = '${file}', -- This will launch the current file
+          pythonPath = function()
+            return '/usr/bin/python' -- Or your virtualenv python
+          end,
+        },
+      }
+
 			dapui.setup()
 
 			dap.listeners.after.event_initialized['dapui_config'] = function()
