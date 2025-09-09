@@ -3,7 +3,13 @@ local M = {}
 function M.setup()
   local opts = { noremap = true, silent = true }
 
-  --Dox
+  -- *** NEW: VISUAL MODE INDENTATION ***
+  -- When in visual mode, pressing Tab will indent the selection
+  vim.keymap.set('v', '<Tab>', '>gv', { desc = "Indent selection" })
+  -- Pressing Shift-Tab will un-indent the selection
+  vim.keymap.set('v', '<S-Tab>', '<gv', { desc = "Un-indent selection" })
+
+  --Dox and other utility keymaps
   vim.keymap.set('n', '<leader>dg', function()
     vim.cmd('!doxygen')
     print("Doxygen documentation generated.")
